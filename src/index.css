@@ -1,0 +1,18 @@
+body{
+  background: #00e1ff;
+  background: -webkit-linear-gradient(to right, "#00c6ff, #0072ff");
+  background: linear-gradient(to right, #00e1ff, #0072ff);
+}
+
+.contenedor{
+  text-align: center;
+}
+
+.header a{
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.main p{
+  font-size: 34px;
+}
