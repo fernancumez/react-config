@@ -8,6 +8,10 @@ module.exports = {
     filename: 'bundle.js',
   },
 
+  devServer: {
+    port: 3000
+  },
+
   resolve: {
     extensions: ['.js', '.jsx']
   },
@@ -29,7 +33,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-      	use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader']
       }
     ]
   },
