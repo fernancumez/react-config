@@ -1,4 +1,4 @@
-# reactConfig
+# ReactJS Basic Configuration
 Basic setup of a project from scratch with ReactJS
 
 ## Available Scripts
