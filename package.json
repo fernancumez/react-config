@@ -1,5 +1,5 @@
 {
-  "name": "reactConfig",
+  "name": "react-config",
   "version": "1.0.0",
   "description": "Configuración básica de un proyecto desde cero con ReactJS",
   "main": ".babelrc.js",
@@ -7,7 +7,7 @@
     "bootstrap": "^4.3.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "serialize-javascript": "^2.1.2"
+    "serialize-javascript": "^5.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.7.0",
@@ -21,7 +21,7 @@
     "style-loader": "^1.0.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0"
+    "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -30,13 +30,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fernancumez/reactConfig.git"
+    "url": "git+https://github.com/fernancumez/react-config.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fernancumez/reactConfig/issues"
+    "url": "https://github.com/fernancumez/react-config/issues"
   },
-  "homepage": "https://github.com/fernancumez/reactConfig#readme"
+  "homepage": "https://github.com/fernancumez/react-config#readme"
 }
