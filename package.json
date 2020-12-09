@@ -1,31 +1,33 @@
 {
   "name": "react-config",
   "version": "1.0.0",
-  "description": "Configuración básica de un proyecto desde cero con ReactJS",
-  "main": ".babelrc.js",
+  "description": "A basic setup of a project from scratch with ReactJS",
+  "main": "index.js",
+  "homepage": "https://fernancumez.github.io/react-config",
   "dependencies": {
-    "bootstrap": "^4.3.1",
+    "bootstrap": "4.3.1",
     "gh-pages": "3.1.0",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "serialize-javascript": "^5.0.1"
+    "react": "16.11.0",
+    "react-dom": "16.11.0",
+    "serialize-javascript": "5.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.0",
-    "@babel/preset-env": "^7.7.1",
-    "@babel/preset-react": "^7.7.0",
-    "babel-loader": "^8.0.6",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "css-loader": "^3.2.0",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
-    "style-loader": "^1.0.0",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.11.0"
+    "@babel/core": "7.7.0",
+    "@babel/preset-env": "7.7.1",
+    "@babel/preset-react": "7.7.0",
+    "babel-loader": "8.0.6",
+    "babel-plugin-transform-class-properties": "6.24.1",
+    "css-loader": "3.2.0",
+    "html-loader": "0.5.5",
+    "html-webpack-plugin": "3.2.0",
+    "style-loader": "1.0.0",
+    "webpack": "4.41.2",
+    "webpack-cli": "3.3.10",
+    "webpack-dev-server": "3.11.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "webpack --mode production",
     "start": "webpack-dev-server --open --mode development"
   },
@@ -34,10 +36,9 @@
     "url": "git+https://github.com/fernancumez/react-config.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "fernancumez",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fernancumez/react-config/issues"
-  },
-  "homepage": "https://github.com/fernancumez/react-config#readme"
+  }
 }
