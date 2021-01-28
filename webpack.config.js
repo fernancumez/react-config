@@ -1,26 +1,29 @@
 const path = require("path");
 const htmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
 
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-  },
-
-  devServer: {
-    port: 3000,
   },
 
   resolve: {
     extensions: [".js", ".jsx"],
   },
 
+  devServer: {
+    contentBase: path.join(__dirname, "dist"),
+    compress: true,
+    port: 3000,
+  },
+
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
+        exclude: /(node_modules | bower_components)/,
         use: {
           loader: "babel-loader",
         },
@@ -35,7 +38,19 @@ module.exports = {
       },
       {
         test: /\.css$/,
+        exclude: /(node_modules | dist)/,
         use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(png|gif|jpg)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "assets/[hash].[ext]",
+            },
+          },
+        ],
       },
     ],
   },
@@ -45,5 +60,6 @@ module.exports = {
       template: "./public/index.html",
       filename: "./index.html",
     }),
+    new webpack.HotModuleReplacementPlugin(),
   ],
 };

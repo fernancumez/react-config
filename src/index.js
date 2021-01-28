@@ -1,11 +1,8 @@
-//TODO: Archivo que arranca nuestra aplicacion
-
-//!Importacion de modulos
 import React from "react";
-import ReactDOM from "react-dom";
-import About from "./app";
+import { render } from "react-dom";
+import App from "./app";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.css";
 
-//?Renderizando la aplicacion
-ReactDOM.render(<About />, document.getElementById("root"));
+const container = document.getElementById("root");
+render(<App />, container);
