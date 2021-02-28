@@ -1,20 +1,21 @@
-const path = require("path");
-const htmlWebpackPlugin = require("html-webpack-plugin");
-const webpack = require("webpack");
+const htmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
+    filename: 'bundle.js',
   },
 
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: ['.js', '.jsx'],
   },
 
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
+    contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 3000,
   },
@@ -25,29 +26,29 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules | bower_components)/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
         },
       },
       {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader",
+            loader: 'html-loader',
           },
         ],
       },
       {
         test: /\.css$/,
         exclude: /(node_modules | dist)/,
-        use: ["style-loader", "css-loader"],
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(png|gif|jpg)$/,
         use: [
           {
-            loader: "file-loader",
+            loader: 'file-loader',
             options: {
-              name: "assets/[hash].[ext]",
+              name: 'assets/[hash].[ext]',
             },
           },
         ],
@@ -57,8 +58,8 @@ module.exports = {
 
   plugins: [
     new htmlWebpackPlugin({
-      template: "./public/index.html",
-      filename: "./index.html",
+      template: './public/index.html',
+      filename: './index.html',
     }),
     new webpack.HotModuleReplacementPlugin(),
   ],
