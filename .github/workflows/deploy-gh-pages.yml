@@ -22,15 +22,11 @@ jobs:
       with:
         node-version: 14.x
 
-    - run: pwd && ls
-
     - name: Install
       run: npm install
 
     - name: Build
       run: npm run build
-
-    - run: pwd && ls
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.0
